@@ -1,5 +1,5 @@
-node {
-    def app
+pipeline {
+     app
 
     stage('Clone repository') {
         /* Cloning the Repository to our Workspace */
@@ -10,7 +10,7 @@ node {
     stage('Build image') {
         /* This builds the actual image */
 
-        app = docker.build("chellatamilan/pywebapp")
+        app = docker.build("rashijha/tcdocker1")
     }
 
     stage('Test image') {
